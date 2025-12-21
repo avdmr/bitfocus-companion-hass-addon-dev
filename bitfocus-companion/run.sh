@@ -6,13 +6,13 @@ DATA_DIR="/data/companion"
 mkdir -p "$DATA_DIR"
 chown -R companion:companion "$DATA_DIR"
 
-# resolve huidige target (als het bestaat)
+# resolve target 
 CURRENT_TARGET=""
 if [ -e /companion ] || [ -L /companion ]; then
   CURRENT_TARGET="$(readlink -f /companion || true)"
 fi
 
-# Als /companion geen symlink is naar DATA_DIR: migreer + forceer
+# If /companion is not a symlink to DATA_DIR: migrate + force
 if [ "$CURRENT_TARGET" != "$DATA_DIR" ]; then
   if [ -d /companion ] && [ ! -L /companion ] && [ "$(ls -A /companion 2>/dev/null || true)" ]; then
     cp -a /companion/. "$DATA_DIR"/ || true
@@ -24,7 +24,6 @@ fi
 
 chown -R companion:companion /companion
 
-# BELANGRIJK: gebruik de echte map, niet de symlink
 export COMPANION_CONFIG_BASEDIR="$DATA_DIR"
 
 exec /docker-entrypoint.sh
