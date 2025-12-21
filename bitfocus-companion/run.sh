@@ -24,8 +24,6 @@ fi
 
 chown -R companion:companion /companion
 
-export COMPANION_CONFIG_BASEDIR="/companion"
-
 # Allow Companion modules to read the config dir (/companion -> /data/companion)
 export NODE_OPTIONS="${NODE_OPTIONS:-} \
  --permission \
@@ -35,4 +33,5 @@ export NODE_OPTIONS="${NODE_OPTIONS:-} \
  --allow-worker \
  --allow-addons"
 
+export COMPANION_CONFIG_BASEDIR="/companion"
 exec /docker-entrypoint.sh
