@@ -24,14 +24,7 @@ fi
 
 chown -R companion:companion /companion
 
-# Allow Companion modules to read the config dir (/companion -> /data/companion)
-export NODE_OPTIONS="${NODE_OPTIONS:-} \
- --permission \
- --allow-fs-read=* \
- --allow-fs-write=* \
- --allow-child-process \
- --allow-worker \
- --allow-addons"
+# BELANGRIJK: gebruik de echte map, niet de symlink
+export COMPANION_CONFIG_BASEDIR="$DATA_DIR"
 
-export COMPANION_CONFIG_BASEDIR="/companion"
 exec /docker-entrypoint.sh
