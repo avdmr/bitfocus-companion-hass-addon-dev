@@ -15,7 +15,7 @@ This setup allows you to run Companion directly within Home Assistant. It integr
     Click the three dots in the upper right corner and select Repositories.
 
     Add this link:
-    https://github.com/avdmr/bitfocus-companion-hass-addon
+    https://github.com/avdmr/bitfocus-companion-hass-addon-dev
 
     Click Save.
 
