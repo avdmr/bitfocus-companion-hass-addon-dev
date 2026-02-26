@@ -1,6 +1,6 @@
 name: "Bitfocus Companion-dev"
 description: "Bitfocus Companion for Home Assistant"
-version: "0.2.6.8.1"
+version: "0.2.6.8.2"
 slug: "bitfocus_companion-dev"
 init: false
 arch:
@@ -8,7 +8,7 @@ arch:
   - amd64
 startup: application
 boot: auto
-#host_network: true
+host_network: true
 webui: "http://[HOST]:[PORT:8000]/"
 panel_icon: "mdi:remote"
 map:
@@ -33,6 +33,7 @@ ports_description:
 usb: true
 build_args:
   BUILD_ARCH: '|arch|'
+
 
 
 
