@@ -18,14 +18,17 @@ ports:
   16622/tcp: 16622
   16623/tcp: 16623
   28492/tcp: 28492
+  6454/udp: 6454
 ports_description:
   8000/tcp: "Web interface"
   16622/tcp: "Satellite API"
   16623/tcp: "WebSocket (Elgato Plugin)"
   28492/tcp: "Additional port"
+  6454/udp: "Art-Net (UDP)"
 usb: true
 build_args:
   BUILD_ARCH: '|arch|'
+
 
 
 
