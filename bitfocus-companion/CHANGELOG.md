@@ -1,6 +1,3 @@
-## 0.2.8.3
-Adding custom UDP and TCP listeners
-
 ## 0.2.8.2
 Adding custom UDP and TCP listeners
 
