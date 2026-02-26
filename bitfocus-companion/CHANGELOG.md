@@ -1,3 +1,5 @@
+## 0.2.7
+Adding ARTNET protocol lisener
 
 ## 0.2.6
 Updated Companion docker image to v4.2.1
