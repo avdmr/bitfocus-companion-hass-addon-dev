@@ -1,6 +1,6 @@
 name: "Bitfocus Companion-dev"
 description: "Bitfocus Companion for Home Assistant"
-version: "0.2.6.8.2"
+version: "0.2.6.8.3"
 slug: "bitfocus_companion-dev"
 init: false
 arch:
@@ -14,25 +14,26 @@ panel_icon: "mdi:remote"
 map:
   - type: addon_config
     read_only: false
-ports:
-  8000/tcp: 8000
-  16622/tcp: 16622
-  16623/tcp: 16623
-  28492/tcp: 28492
-  16759/tcp: 16759  
-  16759/udp: 16759    
-  6454/udp: 6454      
-ports_description:
-  8000/tcp: "Web interface"
-  16622/tcp: "Satellite API"
-  16623/tcp: "WebSocket (Elgato Plugin)"
-  28492/tcp: "Additional port"
-  16759/tcp: "Companion TCP Listener"
-  16759/udp: "Companion UDP Listener"
-  6454/udp: "Art-Net (UDP)"
+#ports:
+  #8000/tcp: 8000
+  #16622/tcp: 16622
+  #16623/tcp: 16623
+  #28492/tcp: 28492
+  #16759/tcp: 16759  
+  #16759/udp: 16759    
+  #6454/udp: 6454      
+#ports_description:
+  #38000/tcp: "Web interface"
+  #16622/tcp: "Satellite API"
+  #16623/tcp: "WebSocket (Elgato Plugin)"
+  #28492/tcp: "Additional port"
+  #16759/tcp: "Companion TCP Listener"
+  #16759/udp: "Companion UDP Listener"
+  #6454/udp: "Art-Net (UDP)"
 usb: true
 build_args:
   BUILD_ARCH: '|arch|'
+
 
 
 
