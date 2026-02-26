@@ -1,5 +1,8 @@
 ## 0.2.7
-Adding ARTNET protocol lisener
+Adding custom UDP and TCP listeners
+
+## 0.2.7
+Adding ARTNET protocol listener
 
 ## 0.2.6
 Updated Companion docker image to v4.2.1
